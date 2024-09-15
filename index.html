@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Uday - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Existing CSS styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: yellow;
+            color: red;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+            }
+        }
+        
+        h1, h2 {
+            font-size: 2.5rem;
+        }
+        
+        @media (max-width: 600px) {
+            h1, h2 {
+                font-size: 1.8rem;
+            }
+        }        
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 23px;
+        }
+        nav ul li {
+            margin: 0 5%;
+        }
+        
+
+        nav ul li a {
+            text-decoration: none;
+            color:whitesmoke;
+        }
+
+        nav ul li a:hover {
+            color: rgb(159, 159, 241);
+            font-size: 1.01rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 130px 0;
+        }
+
+        .firstsection div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 3rem;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .rightsection {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .rightsection img {
+            width: 90%;
+        }
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            .firstsection {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 20px;
+            }
+            
+            .leftsection, .rightsection {
+                max-width: 100%;
+            }
+        
+            .rightsection img {
+                width: 100%;
+                height: auto;
+            }
+        
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .projects-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* For Desktop */
+                gap: 40px;
+            }
+            
+            @media (max-width: 600px) {
+                .projects-grid {
+                    grid-template-columns: 1fr; /* For Mobile */
+                }
+            }
+            
+            .firstsection {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 60px 20px; /* Reduced padding for mobile */
+            }
+            
+            @media (max-width: 600px) {
+                .firstsection {
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+            
+        
+            .project img {
+                width: 100%;
+            }
+        
+            .social-links a {
+                margin-bottom: 10px;
+            }
+        
+            .resume-button {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        
+            .contact-info a {
+                width: 100%;
+                font-size: 1.2rem;
+                padding: 10px;
+            }
+        }
+        .purple {
+            color: rgb(161, 83, 234);
+        }
+
+        #element {
+            color: RED;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Center items vertically */
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
+
+        .social-links a img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 60px;
+            background: linear-gradient(135deg, rgb(35, 35, 77), rgb(220, 2, 140));
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin: 80px 0;
+        }
+
+        .leftsection {
+            font-size: 2.5rem;
+            color: rgb(241, 241, 241);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 50%;
+        }
+
+        .leftsection h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .leftsection h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .leftsection .purple {
+            color: rgb(78, 235, 11);
+            font-weight: 700;
+        }
+
+        .resume-button {
+            text-decoration: none;
+            color: white;
+            background-color: rgb(170, 107, 228);
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .resume-button:hover {
+            background-color: rgb(9, 5, 15);
+            transform: translateY(-5px);
+        }
+
+        .rightsection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .rightsection img {
+            width: 400px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .rightsection img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+        }
+        
+        @media (max-width: 600px) {
+            .rightsection img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: rgb(3, 3, 3);
+        }
+
+        .social-links img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+
+        .about-section {
+            padding: 80px 40px;
+            /* Increase padding for more space */
+            background-color: rgb(18, 18, 62);
+            text-align: center;
+            border: 2px solid rgb(159, 159, 241);
+            /* Add a border for emphasis */
+            border-radius: 10px;
+            /* Rounded corners */
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+            /* Add a shadow to lift the section */
+            max-width: 80%;
+            /* Limit the width to make the content more compact */
+            margin: 40px auto;
+            /* Center the section on the page */
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            /* Increase font size for the heading */
+            margin-bottom: 30px;
+            color: rgb(170, 107, 228);
+            /* Keep heading color consistent */
+            letter-spacing: 1.5px;
+            /* Add space between letters */
+            text-transform: uppercase;
+            /* Make the heading uppercase for emphasis */
+        }
+
+        .about-section p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            /* Increase line-height for better readability */
+            margin: 0 auto;
+            color: rgb(220, 220, 255);
+            /* Softer text color for readability */
+            width: 80%;
+            text-align: justify;
+            /* Justify the text for a cleaner layout */
+        }
+
+
+        .projects-section {
+            padding: 60px 20px;
+            background-color: rgb(18, 18, 62);
+            text-align: center;
+        }
+
+        .projects-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .project {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .project img {
+            width: 800px;
+            /* Adjust the width here */
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .project a {
+            text-decoration: none;
+            color: rgb(159, 159, 241);
+            font-size: 1.5rem;
+        }
+
+        .project a:hover {
+            color: white;
+        }
+
+        .contact-section {
+            padding: 80px 40px;
+            background-color: rgb(18, 18, 62);
+            text-align: center;
+            border: 2px solid rgb(159, 159, 241);
+            border-radius: 10px;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+            max-width: 80%;
+            margin: 40px auto;
+        }
+
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: rgb(170, 107, 228);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .contact-section p {
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            max-width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3rem;
+            padding: 15px 30px;
+            border: 2px solid rgb(159, 159, 241);
+            border-radius: 50px;
+            background-color: rgb(24, 24, 72);
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 350px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-info a:hover {
+            background-color: rgb(170, 107, 228);
+            color: white;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .contact-info img {
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info a:hover img {
+            transform: scale(1.1);
+        }
+
+
+        footer {
+            background-color: #0e0e1a;
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        .resume-container {
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .resume-button {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: transparent;
+            border: 2px solid rgb(170, 107, 228);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+        .resume-button {
+            padding: 12px 25px;
+        }
+        
+        @media (max-width: 600px) {
+            .resume-button {
+                padding: 15px 30px;
+                font-size: 1.2rem;
+            }
+        }
+        
+
+        .resume-button:hover {
+            background-color: rgb(6, 5, 6);
+            color: rgb(255, 255, 255);
+        }
+
+        .projects-section {
+            padding: 80px 40px;
+            background-color: rgb(18, 18, 62);
+            text-align: center;
+        }
+
+        .projects-section h2 {
+            font-size: 2.5rem;
+            color: rgb(242, 242, 242);
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .project {
+            position: relative;
+            background-color: rgb(34, 34, 74);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 15px rgba(232, 9, 9, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+            transition: opacity 0.3s ease;
+        }
+
+        .project:hover img {
+            opacity: 0.85;
+        }
+
+        .project a {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: rgb(241, 236, 236);
+            text-decoration: none;
+            font-size: 1.5rem;
+            padding: 15px;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .project a:hover {
+            background-color: rgba(170, 107, 228, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Uday  Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                <h1>Hi, My name is <span class="purple">Uday kumar Mahato</span></h1>
+                <h2>And I am a Passionate <span id="element"></span></h2>
+                <a href="uday resume .pdf" download class="resume-button">Download Resume</a>
+            </div>
+            <div class="rightsection">
+                <img src="profile pic.jpeg" alt="Profile image">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/uday-kumar-mahato-4a5308285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
+                        LinkedIn
+                    </a>
+                    <a href="https://www.instagram.com/sk_sujal_kumar?igsh=b3Fyc2hsYXQ4M290" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Logo">
+                        Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <hr>
+
+        <!-- New About Me Section -->
+        <section class="about-section">
+            <h2>About Me</h2>
+            <p>
+                I am a 3rd-year B.Tech student department Computer Science and Engineering at Asansol Engineering College. As a passionate frontend
+                developer, I have a strong foundation in HTML, CSS, and JavaScript. I enjoy creating visually appealing
+                and user-friendly web applications, and I'm constantly seeking opportunities to expand my skill set and
+                stay updated with the latest trends in web development.
+            </p>
+        </section>
+        <hr>
+
+        <section class="projects-section">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <img src="Landing page sr.png" alt="Landing Page Project Image">
+                    <a href="landing page\landing.html"
+                        target="_blank">
+                        Landing Page
+                    </a>
+                </div>
+                <div class="project">
+                    <img src="Tribute Page sr.png" alt="Tribute page Project Image">
+                    <a href="Tribute page\Tribute.html"
+                        target="_blank">
+                        Tribute Page
+                    </a>
+                </div>
+                <div class="project">
+                    <img src="amazon sr.png" alt="Amazon Clone Project Image">
+                    <a href="Amazon\Amazon.html"
+                        target="_blank">
+                        Amazon Clone
+                    </a>
+                </div>
+                <div class="project">
+                    <img src="Calculator  sr.png" alt="Calculator Project Image">
+                    <a href="calculator\calculator.html" target="_blank">
+                        Calculator
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+
+
+        <hr>
+        <section class="contact-section">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me through the following platforms or via email.</p>
+            <div class="contact-info">
+                <a href="mailto:sujalkumarmahato24@gmail.com">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon">
+                     sujalkumarmahato24@gmail.com
+                </a>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Uday Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>About
+                    <li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; Udayportfolio.com | All rights reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Frontend Web Developer', 'Web Designer', 'Skilled in HTML', 'CSS', 'JavaScript', 'Also proficient in', 'Python', 'DSA'],
+            typeSpeed: 50,
+        });
+    </script>
+
+</body>
+
+</html>

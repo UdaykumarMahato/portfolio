@@ -1,0 +1,18 @@
+.about-me {
+    background-color: rgb(39, 62, 18);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-me h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
